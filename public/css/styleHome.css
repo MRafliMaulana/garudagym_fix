@@ -1,0 +1,127 @@
+/* Tambahkan gaya CSS ini ke file styleHome.css Anda */
+body{
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  font-family: "Poppins", serif;
+}
+
+.navbar {
+  display: flex; /* Mengatur elemen navbar menjadi flex */
+  justify-content: space-between; /* Memberikan jarak antara logo dan menu navigasi */
+  align-items: center; /* Menyelaraskan elemen secara vertikal di tengah */
+  padding: 20px 5%; /* Memberikan jarak atas 20px dan jarak kanan-kiri 5% */
+  background-color: #f8f9fa; /* Contoh warna background, bisa disesuaikan */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Opsional: memberikan bayangan */
+}
+
+.logo a {
+  text-decoration: none; /* Menghapus garis bawah pada teks */
+  font-size: 24px; /* Ukuran font logo */
+  font-weight: bold; /* Membuat teks lebih tebal */
+  color: #333; /* Warna teks logo */
+}
+.logo span {
+  color: #007bff; /* Warna teks logo */
+}
+
+.menu-nav {
+  display: flex; /* Menyusun menu secara horizontal */
+  gap: 15px; /* Memberikan jarak antar tautan menu */
+}
+
+.menu-nav a {
+  text-decoration: none; /* Menghapus garis bawah pada teks tautan */
+  color: #555; /* Warna teks menu */
+  font-size: 16px; /* Ukuran font menu */
+  transition: color 0.3s ease; /* Efek transisi saat hover */
+}
+
+.menu-nav a:hover {
+  color: #007bff; /* Warna teks saat hover */
+  font-weight: bold;
+}
+.menu-nav a.active {
+  color: #007bff; /* Warna teks saat aktif */
+  font-weight: bold;
+}
+
+main{
+  display: block;
+  margin-top: 2rem;
+  padding: 0 5%; /* Memberikan jarak kanan dan kiri 5% */
+}
+
+.hero-secttion {
+  display: flex; /* Mengatur elemen menjadi flex */
+  justify-content: space-between; /* Memberikan jarak antara aksi dan gambar */
+  align-items: center; /* Menyelaraskan elemen secara vertikal di tengah */
+  gap: 20px;
+  /* border: 1px solid red; */
+}
+
+.aksi {
+  width: 60%;
+  /* border: 1px solid green; */
+}
+
+.aksi h1{
+  font-size: 50px;
+  margin: 0;
+
+}
+.aksi h2{
+  font-size: 60px;
+  color: #007bff;
+  margin: 0;
+
+}
+.aksi p{
+  font-size: 17px;
+  max-width: 800px;
+  margin: 0;
+
+}
+
+.gambar{
+  width: 45%;
+  /* border: 1px solid blue; */
+}
+
+.gambar img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.button-daftar {
+  text-align: left;
+  margin-top: 40px;
+  height: 15%;
+}
+
+.button-daftar a {
+  display: online-block;
+  text-decoration: none;
+  background-color: #007bff;
+  color: #fff;
+  padding: 15px 25px;
+  border-radius: 10px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.button-daftar a:hover {
+  background-color: #0d63be;
+}
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,87 @@
+/* Reset Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: "Poppins", sans-serif;
+    background-color: #fff;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Tinggi minimum sesuai viewport */
+    padding: 20px; /* Memberikan ruang di sekeliling */
+  }
+  
+  /* Landing Section */
+  .landing {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px; /* Lebar maksimum konten */
+    background-color: #f9f9f9; /* Latar belakang area landing */
+    padding: 50px;
+    border-radius: 10px; /* Sudut membulat */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Efek bayangan */
+  }
+  
+  .landing-content {
+    max-width: 50%;
+  }
+  
+  .landing-content h1 {
+    font-size: 3rem;
+    color: #000;
+    margin-bottom: 20px;
+  }
+  
+  .landing-content h1 span {
+    color: #007bff;
+  }
+  
+  .landing-content p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    color: #555;
+  }
+  
+  .cta-button {
+    text-decoration: none;
+    background-color: #007bff;
+    color: #fff;
+    padding: 15px 30px;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+  
+  .cta-button:hover {
+    background-color: #0056b3;
+  }
+  
+  .landing-illustration img {
+    max-width: 500px;
+    height: auto;
+  }
+  
+  @media (max-width: 768px) {
+    .landing {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .landing-content {
+      max-width: 100%;
+      margin-bottom: 30px;
+    }
+  
+    .landing-illustration img {
+      max-width: 100%;
+    }
+  }
+  

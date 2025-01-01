@@ -1,0 +1,157 @@
+/* Reset Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #fff;
+  color: #333;
+}
+
+/* Navigation Bar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  background-color: #f8f8f8;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  flex-wrap: wrap; /* Memastikan navbar responsif */
+}
+
+.logo a {
+  text-decoration: none;
+  font-size: 24px;
+  font-weight: bold;
+  color: #000;
+}
+.logo span {
+  color: #007bff;
+}
+
+.menu-nav a {
+  text-decoration: none;
+  margin: 0 15px;
+  font-size: 1rem;
+  color: #333;
+  transition: color 0.3s ease;
+}
+.menu-nav a:hover {
+  color: #007bff;
+  font-weight: bold;
+}
+.menu-nav a.active {
+  color: #007bff;
+  font-weight: bold;
+}
+
+/* Hero Section */
+.fasilitas-heading {
+  text-align: center;
+  margin: 50px 20px;
+}
+.fasilitas-heading h1 {
+  font-size: 2.5rem;
+}
+.fasilitas-heading p {
+  font-size: 1.2rem;
+}
+
+/* Fasilitas Cards */
+.fasilitas-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.fasilitas-card {
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  text-align: center;
+  padding: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.fasilitas-card img {
+  width: 300px;
+  height: 250px; /* Ukuran konsisten untuk semua gambar */
+  object-fit: cover; /* Memastikan gambar tidak terdistorsi */
+  border-radius: 10px;
+  border: 1px solid #000000;
+  margin-bottom: 10px;
+}
+
+.fasilitas-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+}
+.fasilitas-card p {
+  font-size: 0.9rem;
+  color: #555;
+}
+.fasilitas-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Call to Action Button */
+.button-daftar {
+  text-align: center;
+  margin: 20px 0;
+}
+.button-daftar a {
+  display: inline-block;
+  text-decoration: none;
+  background-color: #007bff;
+  color: #fff;
+  padding: 15px 25px;
+  border-radius: 10px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+.button-daftar a:hover {
+  background-color: #0d63be;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 10px;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .menu-nav a {
+    margin: 10px 0;
+  }
+
+  .fasilitas-heading h1 {
+    font-size: 2rem;
+  }
+  .fasilitas-heading p {
+    font-size: 1rem;
+  }
+
+  .button-daftar a {
+    padding: 10px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .fasilitas-heading h1 {
+    font-size: 1.8rem;
+  }
+  .fasilitas-heading p {
+    font-size: 0.9rem;
+  }
+
+  .button-daftar a {
+    padding: 8px 15px;
+  }
+}
