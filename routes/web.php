@@ -35,11 +35,11 @@ Route::get('/', function () {
 //     return view('dashboard');
 // });
 
-Route::get("test", function(){
-    return Pendaftaran::all();
-});
+// Route::get("test", function(){
+//     return Pendaftaran::all();
+// });
 
-Route::middleware('guest')->group(function(){
+Route::middleware('guest')->group(function () {
     Route::get('/login', [AuthController::class, 'login'])->name('login');
     Route::post('/login', [AuthController::class, 'authenticate'])->name('login.authenticate');
 });
@@ -48,6 +48,7 @@ Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
 Route::get('/home', function () {
     return view('home');
 })->name('home');
+
 Route::middleware('auth')->group(function () {
     Route::middleware('role:admin')->group(function () {
         Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
@@ -57,7 +58,7 @@ Route::middleware('auth')->group(function () {
         Route::get('/home', [HomeController::class, 'index'])->name('home');
     });
 });
-    
+
 Route::get('/register', function () {
     return view('register');
 })->name('register.view');
@@ -75,22 +76,22 @@ Route::get('/Fasilitas', function () {
     return view('fasilitas');
 })->name('fasilitas');
 Route::get('/Pendaftaran', function () {
-    return view('Pendaftaran');
-})->name('Pendaftaran'); 
+    return view('pendaftaran');
+})->name('Pendaftaran');
 Route::get('/Kontak', function () {
-    return view('Kontak');
+    return view('kontak');
 })->name('Kontak');
-Route::get('/data_masuk',function(){
+Route::get('/data_masuk', function () {
     $data = [
         'pendaftaran' => Pendaftaran::all()
     ];
     return view('data_masuk', $data);
 });
-Route::get('/edit_data_pendaftaran/{id}', function($id){
+Route::get('/edit_data_pendaftaran/{id}', function ($id) {
     $pendaftaran = Pendaftaran::find($id);
     return view('edit_data_pendaftaran', ['pendaftaran' => $pendaftaran]);
 })->name('edit_data_pendaftaran');
-Route::put('/edit_data_pendaftaran/{id}', function(Request $request, $id){
+Route::put('/edit_data_pendaftaran/{id}', function (Request $request, $id) {
     $data = $request->validate([
         'nama' => 'required|string|max:255',
         'alamat' => 'required|string',
@@ -102,12 +103,13 @@ Route::put('/edit_data_pendaftaran/{id}', function(Request $request, $id){
     return redirect()->back()->with('success', 'Data berhasil diubah.');
 })->name('edit_data_pendaftaran.update');
 
-Route::delete('data_masuk/{id}', function($id){
+Route::delete('data_masuk/{id}', function ($id) {
     Pendaftaran::find($id)->delete();
 
     return redirect()->back()->with('success', 'Data berhasil dihapus.');
 })->name('data_masuk.destroy');
-Route::get('/pesan_masuk',function(){
+
+Route::get('/pesan_masuk', function () {
     $data = [
         'kontak' => Kontak::all()
     ];

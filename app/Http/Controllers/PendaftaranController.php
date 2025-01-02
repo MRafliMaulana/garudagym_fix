@@ -10,7 +10,7 @@ class PendaftaranController extends Controller
     public function index()
     {
         $pendaftaran = Pendaftaran::all();
-        return view('Pendaftaran', ['pendaftaran' => $pendaftaran]);
+        return view('pendaftaran', ['pendaftaran' => $pendaftaran]);
     }
     public function store(Request $request)
     {
@@ -27,9 +27,9 @@ class PendaftaranController extends Controller
     }
     public function show(Pendaftaran $pendaftaran)
     {
-        return view('edit_data_pendaftaran.show', ['pendaftaran' => $pendaftaran]);
+        return view('edit_data_pendaftaran', ['pendaftaran' => $pendaftaran]);
     }
-    
+
     public function update(Request $request, Pendaftaran $pendaftaran)
     {
         $data = $request->validate([
@@ -49,5 +49,4 @@ class PendaftaranController extends Controller
 
         return redirect()->route('data_masuk')->with('success', 'Data berhasil dihapus.');
     }
-
 }
